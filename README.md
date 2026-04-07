@@ -1,14 +1,50 @@
-# job-portal
-A full-stack Job Portal web application built with Spring Boot, Thymeleaf, Spring Data JPA, and MySQL. It supports role-based access for Users, Recruiters, and Admins — allowing job browsing, application submission with resume upload, and job management.
 
-Features
+# 💼 Job Portal Application
 
-User Registration & Login with session-based authentication
-Role-based access control — USER, RECRUITER, and ADMIN roles
-Browse all jobs with company, location, salary, and skills
-Apply for jobs with name, email, and resume (PDF) upload
-Search & filter jobs by skills, location, and minimum salary
-Post new jobs (Recruiter / Admin only)
-Edit & delete jobs (Admin only)
-Logout with session invalidation
+A full-stack Job Portal web application built using **Spring Boot, Thymeleaf, Spring Data JPA, and MySQL**.  
+It supports **role-based access** for Users, Recruiters, and Admins — enabling job browsing, applications, and job management.
+
+---
+
+## ✨ Features
+
+🔐 **Authentication & Authorization**
+- User Registration & Login (session-based)
+- Role-based access control: **USER, RECRUITER, ADMIN**
+
+🔎 **Job Browsing & Search**
+- View all jobs with company, location, salary & skills
+- Search & filter jobs by:
+  - Skills 💻
+  - Location 📍
+  - Minimum Salary 💰
+
+📄 **Job Application**
+- Apply for jobs with:
+  - Name & Email
+  - Resume upload (PDF 📎)
+
+🛠️ **Job Management**
+- ➕ Post new jobs (Recruiter/Admin)
+- ✏️ Edit jobs (Admin)
+- ❌ Delete jobs (Admin)
+
+🚪 **Session Management**
+- Secure logout with session invalidation
+
+---
+
+## 🛠️ Tech Stack
+
+- ☕ Java
+- 🌱 Spring Boot
+- 🍃 Spring Data JPA
+- 🧩 Thymeleaf
+- 🗄️ MySQL
+- 🎨 HTML, CSS
+
+---
+
+
+   git clone https://github.com/sanju653/job-portal.git
 
