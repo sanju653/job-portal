@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<title>Search Job</title>
+<link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+<div class="page">
+    <div class="card">
+<h2>Choose fields</h2>
+
+<form action="/searchjobs" method="post">
+<p><b>Skills:</b></p>
+
+<div th:each="skill : ${skills}">
+    <input type="checkbox" name="skills" th:value="${skill}">
+    <span th:text="${skill}"></span>
+    <br>
+</div>
+
+<br>
+
+<p><b>Location:</b></p>
+
+<div th:each="loc : ${locations}">
+    <input type="checkbox" name="locations" th:value="${loc}">
+    <span th:text="${loc}"></span>
+    <br>
+</div>
+
+<br>
+
+<p><b>Salary:</b></p>
+<input type="radio" name="minSalary" value="20000"> 20k+ <br>
+<input type="radio" name="minSalary" value="30000"> 30k+ <br>
+<input type="radio" name="minSalary" value="40000"> 40k+ <br>
+<input type="radio" name="minSalary" value="50000"> 50k+ <br>
+
+<br>
+
+<button type="submit">Apply Filter</button>
+</form></div></div></body>
+</html>

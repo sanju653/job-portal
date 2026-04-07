@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<title>Filtered jobs</title>
+<link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+<div class="page">
+    <div class="card">
+    <h2>Filtered Jobs</h2>
+    <div class="table-wrapper">
+    
+<table border="1">
+
+    <tr>
+        <th>Title</th>
+        <th>Location</th>
+        <th>Salary</th>
+    </tr>
+
+    <tr th:each="job : ${jobs}">
+        <td th:text="${job.title}"></td>
+        <td th:text="${job.location}"></td>
+        <td th:text="${job.salary}"></td>
+    </tr>
+
+</table>
+</div></div></div>
+</body>
+</html>

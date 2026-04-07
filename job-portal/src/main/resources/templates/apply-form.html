@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<title>Apply for Job</title>
+<link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+<div class="page">
+    <div class="card">
+<h2>Apply for Job</h2>
+<form th:action="@{/apply/{id}(id=${jobId})}" 
+      th:object="${applicant}" 
+      method="post" enctype="multipart/form-data" >
+
+Enter Name:<input type ="text" th:field="*{name}" required  />
+<p style="color:red" th:errors="*{name}"></p><br><br>
+
+Enter Email:<input type="text" th:field="*{email}" required/>
+<p style="color:red" th:errors="*{email}"></p><br>
+<br>
+
+Upload Resume:<input type="file" name="resume" accept=".pdf,.doc,.docx" required />
+<br><br>
+ <button type="submit">Apply</button></form></div></div>
+</body>
+</html>

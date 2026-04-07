@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Job</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+<div class="page">
+    <div class="card">
+<h2>Add Job</h2>
+
+<form  action="/save" method="post">
+
+    <!-- Job Title -->
+    <label>Title:</label><br>
+    <input type="text" name="title" required>
+    <br><br>
+    <label>Description:</label><br>
+    <input type="text" name="description"  required>
+    <br><br>
+    <!-- Location -->
+    <label>Location:</label><br>
+    <input type="text" name="location"  required>
+    <br><br>
+
+    <!-- Skills -->
+    <label>Skills:</label><br>
+    <input type="text" name="skills" >
+    <br><br>
+
+    <!-- Salary -->
+    <label>Salary:</label><br>
+    <input type="number" name="salary" >
+    <br><br>
+
+    <!-- Submit -->
+    <button type="submit">Save Job</button>
+
+</form>
+</div></div>
+</body>
+</html>

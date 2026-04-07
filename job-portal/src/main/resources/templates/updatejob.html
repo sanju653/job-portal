@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Job</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+<div class="page">
+    <div class="card">
+<h2>Update Job</h2>
+
+<form th:action="@{/updatejob}" th:object="${job}" method="post" >
+
+    <!-- 🔴 VERY IMPORTANT: Hidden ID -->
+    <input type="hidden" th:field="*{id}" />
+
+    
+   Title: <input type="text" th:field="*{title}" placeholder="Enter job title" required>
+    <br><br>
+
+   
+   Location: <input type="text" th:field="*{location}" placeholder="Enter location" required>
+    <br><br>
+
+    Skills:<input type="text" th:field="*{skills}" placeholder="Java, Spring Boot, React">
+    <br><br>
+
+    
+   Salary: <input type="number" th:field="*{salary}" placeholder="Enter salary">
+    <br><br>
+
+    <!-- Submit -->
+    <button type="submit">Update Job</button>
+
+</form>
+</div></div>
+</body>
+</html>

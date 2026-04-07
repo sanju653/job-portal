@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<title>See Available Jobs</title>
+<link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+<div class="page">
+    <div class="card">
+<h2>Available Jobs</h2>
+<div class="table-wrapper">
+<table border="1">
+
+<tr>
+<th>Title</th>
+<th>Skill</th>
+<th>Role</th>
+<th>Location</th>
+<th>Salary</th>
+<th>Action</th>
+<th>   </th>
+<th>   </th>
+</tr>
+
+<tr th:each="job:${jobs}">
+<td th:text="${job.title}"></td>
+<td th:text="${job.skills}"></td>
+<td th:text="${job.description}"></td>
+<td th:text="${job.location}"></td>
+<td th:text="${job.salary}"></td>
+<td><a th:href="@{/apply/{id}(id=${job.id})}">Apply</a></td>
+ <td>
+            <a th:if="${session.role == 'RECRUITER' or session.role == 'ADMIN'}"
+               th:href="@{'/updatejob/' + ${job.id}}">
+              Update
+            </a>
+            </td>
+            <td>
+            <a th:if="${session.role == 'RECRUITER' or session.role == 'ADMIN'}"
+               th:href="@{'/deletejob/' + ${job.id}}">
+              Remove
+            </a>
+        </td>
+</tr>
+</table></div></div></div>
+<br><br />
+ <a href="/logout">Logout</a> <!-- </div></div> -->
+</body>
+</html>

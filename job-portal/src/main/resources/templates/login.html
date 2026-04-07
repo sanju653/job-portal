@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" "http://www.thymeleaf.org">
+<title>Log in here</title>
+<link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+<div class="page">
+    <div class="card">
+<h2>Login Here</h2>
+<form  th:action="@{/dologin}" method="post">
+
+    Email:
+    <input type="email" name="email" required />
+    <p style="color:red;" th:text="${error}"></p>
+    <br><br>
+
+    Password:
+    <input type="password" name="password" required />
+    <p style="color:red;" th:text="${error1}"></p>
+    <br><br>
+
+    <button type="submit">Login</button>
+
+</form></div></div>
+</body>
+</html>
