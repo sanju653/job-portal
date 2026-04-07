@@ -1,7 +1,7 @@
 
 # 💼 Job Portal Application
 
-A full-stack Job Portal web application built using **Spring Boot, Thymeleaf, Spring Data JPA, and MySQL**.  
+A java bases Job Portal web application(👀Mainly Focused on Backend👀) built using **Spring Boot, Thymeleaf, Spring Data JPA, and MySQL**.  
 It supports **role-based access** for Users, Recruiters, and Admins — enabling job browsing, applications, and job management.
 
 ---
