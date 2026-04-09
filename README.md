@@ -44,6 +44,32 @@ It supports **role-based access** for Users, Recruiters, and Admins — enabling
 - 🎨 HTML, CSS
 
 ---
+## How to Run
+
+1. Clone the repository
+2. Configure `application.properties` with your MySQL credentials
+3. Run the Spring Boot application
+4. Open `http://localhost:8080` in your browser
+
+## Screenshots
+
+### Login
+![Login](src/main/resources/static/screenshots/login.png)
+
+### Register
+![Register](src/main/resources/static/screenshots/register.png)
+
+### Welcome
+![Welcome](src/main/resources/static/screenshots/welcome.png)
+### Available Jobs
+![Available Jobs](src/main/resources/static/screenshots/available%20job.png)
+
+### Filter Jobs
+![Filter Jobs](src/main/resources/static/screenshots/filterjob.png)
+
+### Add Job
+![Add Job](src/main/resources/static/screenshots/addjob.png)
+
 
 
    git clone https://github.com/sanju653/job-portal.git
